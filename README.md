@@ -8,11 +8,11 @@ Each problem includes explanations, edge cases, dry runs, and complexity analysi
 
 ## 🔢 1. Decimal to Binary Conversion
 
-📌 Problem Statement
+### 📌 Problem Statement
 
 Convert a given decimal number into its binary representation.
 
-⚡ Edge Cases
+## ⚡ Edge Cases
 
 Input = 0 → Output should be 0
 
@@ -23,7 +23,7 @@ Large input values (e.g., 1024) → Should still work efficiently
 Negative numbers → If allowed, must handle two’s complement (optional case depending on constraints)
 
 
-🛠 Approaches
+## 🛠 Approaches
 
 Brute Force Approach
 
@@ -31,23 +31,23 @@ Repeatedly divide the number by 2.
 
 Collect remainders and reverse them.
 
-⏳ Time Complexity: O(log n)
+## ⏳ Time Complexity: O(log n)
 
 💾 Space Complexity: O(log n) (stack of remainders)
 
 
-Optimized Approach (Using Queue)
+### Optimized Approach (Using Queue)
 
 Instead of reversing, use a queue to maintain order while dividing.
 
 Push remainders into the queue and directly build the binary string.
 
-⏳ Time Complexity: O(log n)
+## ⏳ Time Complexity: O(log n)
 
 💾 Space Complexity: O(log n)
 
 
-🔍 Dry Run (n = 10)
+### 🔍 Dry Run (n = 10)
 
 Step 1: 10 % 2 = 0 → queue = [0]
 Step 2: 10 / 2 = 5
@@ -65,12 +65,12 @@ Binary = 1010
 
 ## 🪢 2. Minimum Rope Cost (a.k.a Minimum Cost to Connect Ropes)
 
-📌 Problem Statement
+## 📌 Problem Statement
 
 Given n ropes with different lengths, connect them into one rope with the minimum cost.
 The cost of connecting two ropes = sum of their lengths.
 
-⚡ Edge Cases
+## ⚡ Edge Cases
 
 Single element array → Cost = 0
 
@@ -81,7 +81,7 @@ Strictly increasing/decreasing arrays
 Large inputs → Must avoid TLE
 
 
-🛠 Approaches
+## 🛠 Approaches
 
 Brute Force Approach
 
@@ -89,12 +89,12 @@ Try all possible ways of connecting ropes.
 
 Extremely inefficient.
 
-⏳ Time Complexity: O(n^2)
+## ⏳ Time Complexity: O(n^2)
 
 💾 Space Complexity: O(1)
 
 
-Optimized Approach (Using Priority Queue / Min-Heap)
+### Optimized Approach (Using Priority Queue / Min-Heap)
 
 Always connect the two smallest ropes first.
 
@@ -102,12 +102,12 @@ Push back their sum into the priority queue.
 
 Repeat until one rope remains.
 
-⏳ Time Complexity: O(n log n)
+## ⏳ Time Complexity: O(n log n)
 
 💾 Space Complexity: O(n)
 
 
-🔍 Dry Run (ropes = [4,3,2,6])
+### 🔍 Dry Run (ropes = [4,3,2,6])
 
 Step 1: PQ = [2,3,4,6]
 Take 2 & 3 → cost = 5 → total = 5
@@ -126,11 +126,11 @@ PQ = [15]
 
 ## 🪟 3. Sliding Window Maximum
 
-📌 Problem Statement
+## 📌 Problem Statement
 
 Given an array and a window size k, find the maximum element in each sliding window.
 
-⚡ Edge Cases
+## ⚡ Edge Cases
 
 k = 1 → Every element is its own max
 
@@ -143,7 +143,7 @@ Large k values close to n
 Empty array → No output
 
 
-🛠 Approaches
+## 🛠 Approaches
 
 Brute Force Approach
 
@@ -154,7 +154,7 @@ For each window of size k, scan all k elements.
 💾 Space Complexity: O(1)
 
 
-Optimized Approach (Using Deque)
+### Optimized Approach (Using Deque)
 
 Maintain a deque of indices of useful elements.
 
@@ -167,7 +167,7 @@ The front always gives the maximum of the current window.
 💾 Space Complexity: O(k)
 
 
-🔍 Dry Run (arr = [1,3,-1,-3,5,3,6,7], k=3)
+### 🔍 Dry Run (arr = [1,3,-1,-3,5,3,6,7], k=3)
 
 Window 1: [1,3,-1] → Max = 3
 Window 2: [3,-1,-3] → Max = 3
@@ -193,7 +193,7 @@ Window 6: [3,6,7] → Max = 7
 
 ---
 
-🏆 Conclusion
+## 🏆 Conclusion
 
 These problems demonstrate the evolution of problem-solving from brute force to optimal solutions using Queues & Priority Queues.
 Writing and analyzing both approaches helps in understanding time-space trade-offs and prepares for interview-level problem solving.
